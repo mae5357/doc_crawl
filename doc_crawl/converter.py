@@ -72,6 +72,9 @@ HtmlContent = NewType("HtmlContent", str)
 
 class Converter:
     """
+    converts input source to output type
+    Input:
+        CrawlerConfig: config object with input and output params
     Example Config:
         config = {
         "input": {
@@ -152,3 +155,10 @@ class Converter:
 
         # write to the file
         epub.write_epub(self.config.output.book_path, book)
+
+    def read_website(self, url: str) -> Generator[Tuple[HtmlContent, str], None, None]:
+        raise NotImplementedError
+    
+    def write_pdf(self, contents: Generator[Tuple[HtmlContent, str], None, None]):
+        raise NotImplementedError
+    
