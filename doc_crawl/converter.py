@@ -152,23 +152,3 @@ class Converter:
 
         # write to the file
         epub.write_epub(self.config.output.book_path, book)
-
-
-if __name__ == "__main__":
-    # go to parent folder of this file
-    os.chdir(os.path.dirname(os.path.dirname(__file__)))
-    
-    config = {
-        "input": {
-            "folder_path": "artifacts/md",
-            "file_type": "markdown",
-        },
-        "output": {
-            "book_path": "artifacts/epubook/mybook_1.epub",
-            "book_name": "book_name",
-        },
-    }
-
-    config = CrawlerConfig(**config)
-    converter = Converter(config)
-    converter.convert()

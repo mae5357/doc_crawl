@@ -13,6 +13,9 @@ markdown2 = "^2.4.13"
 ebooklib = "^0.18"
 pydantic = "^2.7.2"
 scrapy = "^2.11.2"
+poethepoet = "^0.26.1"
+click = "^8.1.7"
+ruff = "^0.4.6"
 
 
 [build-system]
