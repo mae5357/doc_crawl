@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "doc-crawl"
+version = "0.1.0"
+description = ""
+authors = ["madison <madison.a.ebersole@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+beautifulsoup4 = "^4.12.3"
+markdown2 = "^2.4.13"
+ebooklib = "^0.18"
+pydantic = "^2.7.2"
+scrapy = "^2.11.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
